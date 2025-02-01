@@ -5,7 +5,7 @@ const Component = () => {
     <div>
       <h1>コンポーネント</h1>
       <ul>
-        <li><Link to="/component/button">ボタンページ</Link></li>
+        <li><Link to="/component/button">ボタン</Link></li>
       </ul>
     </div>
   );
