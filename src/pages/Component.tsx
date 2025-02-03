@@ -6,6 +6,7 @@ const Component = () => {
       <h1>コンポーネント</h1>
       <ul>
         <li><Link to="/component/button">ボタン</Link></li>
+        <li><Link to="/component/checkbox">チェックボックス</Link></li>
       </ul>
     </div>
   );
