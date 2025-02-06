@@ -7,6 +7,7 @@ const Component = () => {
       <ul>
         <li><Link to="/component/button">ボタン</Link></li>
         <li><Link to="/component/checkbox">チェックボックス</Link></li>
+        <li><Link to="/component/radiobutton">ラジオボタン</Link></li>
       </ul>
     </div>
   );

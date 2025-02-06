@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Component from "./pages/Component";
 import ButtonComponent from "./pages/ButtonComponent";
 import CheckBoxComponent from "./pages/CheckBoxComponent";
+import RadioButtonComponent from "./pages/RadioButtonComponent";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -33,6 +34,7 @@ function App() {
           <Route path="/component" element={<Component />} />
           <Route path="/component/button" element={<ButtonComponent />} />
           <Route path="/component/checkbox" element={<CheckBoxComponent />} />
+          <Route path="/component/radiobutton" element={<RadioButtonComponent />} />
         </Routes>
       </main>
 
