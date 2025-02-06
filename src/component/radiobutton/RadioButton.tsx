@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import { FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from "@mui/material";
 
-interface RadioButtonProps {
-    customSize?: "small" | "medium";
-    color?: "primary" | "secondary" | "default" | "error" | "info" | "success" | "warning";
+interface RadioOption {
+  value: string;
+  label: string;
+  size?: "small" | "medium";
+  color?: "primary" | "secondary" | "default" | "error" | "info" | "success" | "warning";
+  disabled?: boolean;
 }
 
-const RadioButton: React.FC<RadioButtonProps> = ({
-    customSize = "medium", 
-    color = "primary"
-}) => {
+interface RadioButtonProps {
+  options: RadioOption[];
+}
+
+const RadioButton: React.FC<RadioButtonProps> = ({ options }) => {
   const [value, setValue] = useState("");
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -20,10 +24,20 @@ const RadioButton: React.FC<RadioButtonProps> = ({
     <FormControl component="fieldset">
       <FormLabel component="legend">Gender</FormLabel>
       <RadioGroup aria-label="gender" name="gender1" value={value} onChange={handleChange}>
-        <FormControlLabel value="female" control={<Radio size={customSize === "small" ? "small" : "medium"} color={color}/>} label="Female" />
-        <FormControlLabel value="male" control={<Radio size={customSize === "small" ? "small" : "medium"} color={color}/>} label="Male" />
-        <FormControlLabel value="other" control={<Radio size={customSize === "small" ? "small" : "medium"} color={color}/>} label="Other" />
-        <FormControlLabel value="disabled" disabled control={<Radio size={customSize === "small" ? "small" : "medium"} color={color}/>} label="(Disabled option)" />
+        {options.map((option) => (
+          <FormControlLabel
+            key={option.value}
+            value={option.value}
+            disabled={option.disabled || false}
+            control={
+              <Radio
+                size={option.size || "medium"}
+                color={option.color || "primary"}
+              />
+            }
+            label={option.label}
+          />
+        ))}
       </RadioGroup>
     </FormControl>
   );
