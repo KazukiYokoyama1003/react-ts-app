@@ -4,6 +4,7 @@ import ButtonComponent from "./pages/ButtonComponent";
 import CheckBoxComponent from "./pages/CheckBoxComponent";
 import RadioButtonComponent from "./pages/RadioButtonComponent";
 import SelectBoxComponent from "./pages/SelectBoxComponent";
+import SwitchComponent from "./pages/SwitchComponent";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -36,7 +37,6 @@ function App() {
           <Route path="/component/button" element={<ButtonComponent />} />
           <Route path="/component/checkbox" element={<CheckBoxComponent />} />
           <Route path="/component/radiobutton" element={<RadioButtonComponent />} />
-          <Route path="/component/selectbox" element={<SelectBoxComponent />} />
         </Routes>
       </main>
 
