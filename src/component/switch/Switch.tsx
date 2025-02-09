@@ -1,7 +1,7 @@
 import { FormGroup, FormControlLabel, Switch as MuiSwitch } from '@mui/material';
 import { useState } from 'react';
 
-interface SwitchProps {
+export interface SwitchProps {
   label: string;
   size?: 'small' | 'medium';
   color?: 'default' | 'primary' | 'secondary' | 'error' | 'info' | 'success' | 'warning';
