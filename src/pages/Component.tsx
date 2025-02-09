@@ -10,6 +10,8 @@ const Component = () => {
         <li><Link to="/component/radiobutton">ラジオボタン</Link></li>
         <li><Link to="/component/selectbox">セレクトボックス</Link></li>
         <li><Link to="/component/switch">スイッチ</Link></li>
+        <li><Link to="/component/textfield">テキストフィールド</Link></li>
+        <li><Link to="/component/tooltip">ツールチップ</Link></li>
       </ul>
     </div>
   );
