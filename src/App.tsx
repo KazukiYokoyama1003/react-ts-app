@@ -3,6 +3,8 @@ import Component from "./pages/Component";
 import ButtonComponent from "./pages/ButtonComponent";
 import CheckBoxComponent from "./pages/CheckBoxComponent";
 import RadioButtonComponent from "./pages/RadioButtonComponent";
+import SelectBoxComponent from "./pages/SelectBoxComponent";
+import SwitchComponent from "./pages/SwitchComponent";
 import TextFieldComponent from "./pages/TextFieldComponent";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
