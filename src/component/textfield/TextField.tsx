@@ -1,6 +1,6 @@
 import { FormGroup, Box, TextField as MuiTextField } from '@mui/material';
 
-interface FieldProps {
+export interface FieldProps {
     id: string;
     label: string;
     variant: 'outlined' | 'filled' | 'standard'; 
