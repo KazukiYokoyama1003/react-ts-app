@@ -7,6 +7,7 @@ import SelectBoxComponent from "./pages/SelectBoxComponent";
 import SwitchComponent from "./pages/SwitchComponent";
 import TextFieldComponent from "./pages/TextFieldComponent";
 import TooltipComponent from "./pages/TooltipComponent.tsx";
+import TableComponent from "./pages/TableComponent";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -39,6 +40,11 @@ function App() {
           <Route path="/component/button" element={<ButtonComponent />} />
           <Route path="/component/checkbox" element={<CheckBoxComponent />} />
           <Route path="/component/radiobutton" element={<RadioButtonComponent />} />
+          <Route path="/component/selectbox" element={<SelectBoxComponent />} />
+          <Route path="/component/switch" element={<SwitchComponent />} />
+          <Route path="/component/textfield" element={<TextFieldComponent />} />
+          <Route path="/component/tooltip" element={<TooltipComponent />} />
+          <Route path="/component/table" element={<TableComponent />} />
         </Routes>
       </main>
 
