@@ -1,5 +1,5 @@
 import React from "react";
-import TableComponent, { Column } from "../component/table/Table"; // 正しいパスを確認！
+import TableComponent, { Column } from "../component/table/Table";
 
 const columns: Column[] = [
   { id: "name", label: "Dessert (100g serving)", align: "left" },
