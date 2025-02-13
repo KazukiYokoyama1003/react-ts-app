@@ -1,27 +1,8 @@
 import React from "react";
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Checkbox } from "@mui/material";
+import { Row, TableComponentProps } from "./interface";
 import "./table.sass";
 
-export interface Column {
-  id: string;
-  label: string;
-  align?: "left" | "center" | "right";
-}
-
-interface Row {
-  id: string;
-  name: string;
-  calories: number;
-  fat: number;
-  carbs: number;
-  protein: number;
-}
-
-interface TableComponentProps {
-  columns: Column[];
-  rows: Row[];
-  showCheckbox?: boolean; // チェックボックスの表示/非表示
-}
 
 const TableComponent: React.FC<TableComponentProps> = ({ columns, rows, showCheckbox = false }) => {
   return (
