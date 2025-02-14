@@ -8,6 +8,7 @@ import SwitchComponent from "./pages/SwitchComponent";
 import TextFieldComponent from "./pages/TextFieldComponent";
 import TooltipComponent from "./pages/TooltipComponent.tsx";
 import TableComponent from "./pages/TableComponent";
+import PaginationComponent from "./pages/PaginationComponent.tsx";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -45,6 +46,7 @@ function App() {
           <Route path="/component/textfield" element={<TextFieldComponent />} />
           <Route path="/component/tooltip" element={<TooltipComponent />} />
           <Route path="/component/table" element={<TableComponent />} />
+          <Route path="/component/pagination" element={<PaginationComponent />} />
         </Routes>
       </main>
 
