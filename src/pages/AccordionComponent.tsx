@@ -1,5 +1,5 @@
 import React from "react";
-import Accordion from "../component/accordion/accordion";
+import Accordion from "../component/accordion/Accordion";
 
 const App: React.FC = () => {
   return (
