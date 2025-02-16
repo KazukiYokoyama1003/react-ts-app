@@ -15,6 +15,7 @@ const Component = () => {
         <li><Link to="/component/table">テーブル</Link></li>
         <li><Link to="/component/pagination">ページネーション</Link></li>
         <li><Link to="/component/dialog">ダイアログ</Link></li>
+        <li><Link to="/component/accordion">アコーディオン</Link></li>
       </ul>
     </div>
   );
