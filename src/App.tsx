@@ -12,7 +12,6 @@ import PaginationComponent from "./pages/PaginationComponent.tsx";
 import ModalComponent from "./pages/ModalComponent";
 import DialogComponent from "./pages/DialogComponent";
 import AccordionComponent from "./pages/AccordionComponent.tsx";
-
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
