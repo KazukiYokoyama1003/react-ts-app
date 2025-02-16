@@ -1,5 +1,5 @@
 import React from "react";
-import Dialog from "../component/dialog/dialog";
+import Dialog from "../component/dialog/Dialog";
 
 const App: React.FC = () => {
   return (
