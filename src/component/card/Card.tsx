@@ -1,9 +1,8 @@
 import React from "react";
 import "./card.sass";
+import { CardProps } from "./interface";
 
-const Card: React.FC<{ title: string; header: string; subtitle: string; explanation: string; action: string }> = ({ 
-  title, header, subtitle, explanation, action
-}) => {
+const Card: React.FC<CardProps> = ({ title, header, subtitle, explanation, action }) => {
   return (
     <div className="card">
       <div className="card-title">{title}</div>
