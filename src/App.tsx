@@ -12,6 +12,8 @@ import PaginationComponent from "./pages/PaginationComponent.tsx";
 import ModalComponent from "./pages/ModalComponent";
 import DialogComponent from "./pages/DialogComponent";
 import AccordionComponent from "./pages/AccordionComponent.tsx";
+import CardComponent from "./pages/CardComponent.tsx";
+import SpinnerComponent from "./pages/SpinnerComponent.tsx";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -53,6 +55,8 @@ function App() {
           <Route path="/component/modal" element={<ModalComponent />} />
           <Route path="/component/dialog" element={<DialogComponent />} />
           <Route path="/component/accordion" element={<AccordionComponent />} />
+          <Route path="/component/card" element={<CardComponent />} />
+          <Route path="/component/spinner" element={<SpinnerComponent />} />
         </Routes>
       </main>
 
