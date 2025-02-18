@@ -1,0 +1,39 @@
+.accordion-container
+  margin: 20px auto
+
+.accordion
+  background-color: #000
+  border-radius: 8px
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
+  margin-bottom: 10px
+  overflow: hidden
+  max-height: 50px
+
+  &.open
+    max-height: 300px
+
+.accordion-header
+  font-weight: bold
+  align-items: center
+  display: flex
+  justify-content: space-between
+  padding: 12px
+  cursor: pointer
+  background-color: #000
+  color: white
+  border-radius: 8px 8px 0 0
+
+.accordion-content
+  padding: 10px
+  font-size: 14px
+  white-space: pre-line
+
+  &.open
+    display: block
+
+.accordion-icon
+  transition: transform 0.3s ease
+  font-size: 18px
+
+  &.open
+    transform: rotate(180deg)

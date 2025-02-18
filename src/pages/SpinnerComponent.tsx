@@ -1,10 +1,10 @@
 import React from "react";
-import Dialog from "../component/dialog/Dialog";
+import Spinner from "../component/spinner/Spinner";
 
 const App: React.FC = () => {
   return (
     <div>
-      <Dialog />
+      <Spinner />
     </div>
   );
 };
