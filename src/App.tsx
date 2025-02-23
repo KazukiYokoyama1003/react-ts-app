@@ -14,6 +14,7 @@ import DialogComponent from "./pages/DialogComponent";
 import AccordionComponent from "./pages/AccordionComponent.tsx";
 import CardComponent from "./pages/CardComponent.tsx";
 import SpinnerComponent from "./pages/SpinnerComponent.tsx";
+import Searchform from "./pages/SearchForm.tsx";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -37,6 +38,7 @@ function App() {
       <nav>
         <ul>
           <li><Link to="/component">コンポーネント</Link></li>
+          <li><Link to="/searchform">検索フォーム</Link></li>
         </ul>
       </nav>
 
@@ -57,6 +59,7 @@ function App() {
           <Route path="/component/accordion" element={<AccordionComponent />} />
           <Route path="/component/card" element={<CardComponent />} />
           <Route path="/component/spinner" element={<SpinnerComponent />} />
+          <Route path="/searchform" element={<Searchform />} />
         </Routes>
       </main>
 
