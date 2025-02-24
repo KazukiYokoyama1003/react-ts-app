@@ -1,0 +1,26 @@
+.button {
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid transparent;
+    padding: 0.5rem 3rem;
+    font-size: 16px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+    white-space: nowrap;
+  }
+  
+  .small {
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+  }
+  
+  .large {
+    width: 200px;
+    height: 60px;
+    font-size: 18px;
+  }
