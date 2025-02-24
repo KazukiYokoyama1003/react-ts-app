@@ -2,9 +2,9 @@ import MenuComponent from "./MenuComponent";
 import TooltipComponent from "./TooltipComponent";
 import ButtonComponent from "./header/ButtonComponent";
 
-const Form: React.FC = () => {
+const Header: React.FC = () => {
   return (
-    <div className="form-container" style={{ display: "flex", gap: "50px", alignItems: "center", backgroundColor:"#fff", width:"100%" }}>
+    <div className="header-container" style={{ display: "flex", gap: "50px", alignItems: "center", backgroundColor:"#fff", width:"100%" }}>
       <div style={{ display:"flex", gap:"5px" }}>
         <MenuComponent />
         <TooltipComponent />
@@ -17,4 +17,4 @@ const Form: React.FC = () => {
   );
 };
 
-export default Form;
+export default Header;
