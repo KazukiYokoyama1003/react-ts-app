@@ -20,8 +20,8 @@ const Form: React.FC = () => {
         <TextFieldComponent />
       </div>
       <div style={{ display:"flex", justifyContent:"center", marginTop:"2rem" }}>
-        <PostButtonComponent />
         <ClearButtonComponent />
+        <PostButtonComponent />
       </div>
     </div>
   );
