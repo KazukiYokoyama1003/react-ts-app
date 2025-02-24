@@ -1,7 +1,8 @@
 import CheckBoxComponent from "./search/CheckBoxComponent";
 import RadioButtonComponent from "./search/RadioButtonComponent";
 import TextFieldComponent from "./search/TextFieldComponent";
-import ButtonComponent from "./search/ButtonComponent";
+import PostButtonComponent from "./search/PostButtonComponent";
+import ClearButtonComponent from "./search/ClearButtonComponent";
 
 const Form: React.FC = () => {
   return (
@@ -10,13 +11,18 @@ const Form: React.FC = () => {
       <div style={{ display:"flex" }}>
         <p style={{ padding:"2rem" }}>チェックボックス：</p><CheckBoxComponent />
       </div>
-      <div style={{ display:"flex", paddingLeft:"2rem" }}>
-        <p style={{ margin:"0.5rem 3rem 0 0" }}>ラジオボタン：</p><RadioButtonComponent />
+      <div style={{ display: "flex", paddingLeft:"2rem" }}>
+        <p style={{ margin: "0.5rem 3rem 0 0" }}>ラジオボタン：</p>
+        <RadioButtonComponent />
       </div>
-      <div style={{ display:"flex", paddingLeft:"2rem", marginTop:"2rem" }}>
-        <p style={{ margin:"0.5rem 3rem 0 0" }}>テキストフィールド：</p><TextFieldComponent />
+      <div style={{ display: "flex",paddingLeft:"2rem", marginTop: "2rem"}}>
+        <p style={{ margin:"0.5rem 3rem 0 0" }}>テキストフィールド：</p>
+        <TextFieldComponent />
       </div>
-        <ButtonComponent />
+      <div style={{ display:"flex", justifyContent:"center", marginTop:"2rem" }}>
+        <PostButtonComponent />
+        <ClearButtonComponent />
+      </div>
     </div>
   );
 };
