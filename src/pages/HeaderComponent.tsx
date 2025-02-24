@@ -1,6 +1,6 @@
 import MenuComponent from "./MenuComponent";
 import TooltipComponent from "./TooltipComponent";
-import ButtonComponent from "./header/ButtonComponent";
+import Button from "../component/button/Button";
 
 const Header: React.FC = () => {
   return (
@@ -11,7 +11,9 @@ const Header: React.FC = () => {
         <TooltipComponent />
       </div>
       <div style={{ display: "flex", marginLeft: "auto" }}>
-        <ButtonComponent />
+        <div style={{ padding:"0.5rem" }}>
+          <Button size="small" color="blue">ログイン</Button>
+        </div>      
       </div>
     </div>
   );
