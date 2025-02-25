@@ -15,7 +15,7 @@ import AccordionComponent from "./pages/AccordionComponent.tsx";
 import CardComponent from "./pages/CardComponent.tsx";
 import MenuComponent from "./pages/MenuComponent.tsx";
 import SpinnerComponent from "./pages/SpinnerComponent.tsx";
-import Searchform from "./pages/SearchForm.tsx";
+import Searchform from "./pages/Searchform.tsx";
 import HeaderComponent from "./pages/HeaderComponent.tsx";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
