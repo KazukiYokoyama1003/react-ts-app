@@ -1,44 +1,38 @@
-import React, { useState } from "react";
-import { FormControl, RadioGroup, FormControlLabel, Radio } from "@mui/material";
+import { FC } from "react";
 
-interface RadioOption {
+interface RadioButtonOption {
   value: string;
   label: string;
   size?: "small" | "medium";
   color?: "primary" | "secondary" | "default" | "error" | "info" | "success" | "warning";
-  disabled?: boolean;
 }
 
 interface RadioButtonProps {
-  options: RadioOption[];
+  options: RadioButtonOption[];
+  selectedValue: string;
+  setSelectedValue: (value: string) => void;
 }
 
-const RadioButton: React.FC<RadioButtonProps> = ({ options }) => {
-  const [value, setValue] = useState("");
-
+const RadioButton: FC<RadioButtonProps> = ({ options, selectedValue, setSelectedValue }) => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(event.target.value);
+    setSelectedValue(event.target.value);
   };
 
   return (
-    <FormControl component="fieldset">
-      <RadioGroup row aria-label="rado" name="radio1" value={value} onChange={handleChange} style={{ display:"flex", gap:"10px"}}>
-        {options.map((option) => (
-          <FormControlLabel
-            key={option.value}
+    <div>
+      {options.map((option) => (
+        <label key={option.value}>
+          <input
+            type="radio"
+            name="radio1"
             value={option.value}
-            disabled={option.disabled || false}
-            control={
-              <Radio
-                size={option.size || "medium"}
-                color={option.color || "primary"}
-              />
-            }
-            label={option.label}
+            checked={selectedValue === option.value}
+            onChange={handleChange}
           />
-        ))}
-      </RadioGroup>
-    </FormControl>
+          {option.label}
+        </label>
+      ))}
+    </div>
   );
 };
 
