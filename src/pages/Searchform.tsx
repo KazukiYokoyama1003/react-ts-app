@@ -9,11 +9,15 @@ const Form: React.FC = () => {
   const [checkboxValues, setCheckboxValues] = useState<string[]>([]);
   const [radioValue, setRadioValue] = useState("");
   const [textValue, setTextValue] = useState("");
+  const [isCleared, setIsCleared] = useState(false);
 
   const handleClear = () => {
     setCheckboxValues([]);
     setRadioValue("");
     setTextValue("");
+    setIsCleared(true);
+
+    setTimeout(() => setIsCleared(false), 2000);
   };
 
   return (
@@ -33,8 +37,13 @@ const Form: React.FC = () => {
       </div>
       <div style={{ display:"flex", justifyContent:"center", marginTop:"2rem" }}>
         <PostButtonComponent />
-        <ClearButtonComponent onClick={ handleClear }/>
+        <ClearButtonComponent onClick={handleClear}/>
       </div>
+      {isCleared && (
+        <div style={{ textAlign: "center", marginTop: "20px", color: "green" }}>
+          <p>条件がクリアされました！</p>
+        </div>
+      )}
     </div>
   );
 };

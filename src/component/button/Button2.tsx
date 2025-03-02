@@ -6,6 +6,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   label?: string;
   size?: "small" | "large";
   color?: string;
+  onClick?: () => void;
 }
 
 const Button: FC<ButtonProps> = ({
@@ -14,6 +15,7 @@ const Button: FC<ButtonProps> = ({
   color = "blue",
   children,
   className,
+  onClick,
   ...props
 }) => {
   return (
@@ -24,6 +26,7 @@ const Button: FC<ButtonProps> = ({
         className
       )}
       style={{ backgroundColor: color, color: "white" }}
+      onClick={onClick}
       {...props}
     >
       {label || children}

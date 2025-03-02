@@ -1,11 +1,11 @@
 import Button from "../../component/button/Button2";
 
-function App() {
+const ClearButtonComponent = ({ onClick }: { onClick: () => void }) => {
   return (
     <div style={{ padding:"20px" }}>
-      <Button label="条件クリア" color="blue"></Button>
+      <Button label="条件クリア" color="blue" onClick={onClick}></Button>
     </div>
   );
 }
 
-export default App;
+export default ClearButtonComponent;
