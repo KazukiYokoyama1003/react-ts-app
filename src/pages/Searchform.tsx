@@ -8,13 +8,20 @@ import ClearButtonComponent from "./search/ClearButtonComponent";
 const Form: React.FC = () => {
   const [checkboxValues, setCheckboxValues] = useState<string[]>([]);
   const [radioValue, setRadioValue] = useState("");
-  const [textValue, setTextValue] = useState("");
+  const [textValues, setTextValues] = useState<{ [key: string]: string }>({
+    name: "",
+  });
   const [isCleared, setIsCleared] = useState(false);
 
   const handleClear = () => {
     setCheckboxValues([]);
     setRadioValue("");
-    setTextValue("");
+    setTextValues((prev) =>
+      Object.keys(prev).reduce((acc, key) => {
+        acc[key] = "";
+        return acc;
+      }, {} as { [key: string]: string })
+    );
     setIsCleared(true);
 
     setTimeout(() => setIsCleared(false), 2000);
@@ -33,17 +40,12 @@ const Form: React.FC = () => {
       </div>
       <div style={{ display: "flex",paddingLeft:"2rem", marginTop: "2rem"}}>
         <p style={{ margin:"0.5rem 3rem 0 0" }}>テキストフィールド：</p>
-        <TextFieldComponent values={textValue} setValue={setTextValue} />
+        <TextFieldComponent values={textValues} setValue={setTextValues} />
       </div>
       <div style={{ display:"flex", justifyContent:"center", marginTop:"2rem" }}>
         <PostButtonComponent />
         <ClearButtonComponent onClick={handleClear}/>
       </div>
-      {isCleared && (
-        <div style={{ textAlign: "center", marginTop: "20px", color: "green" }}>
-          <p>条件がクリアされました！</p>
-        </div>
-      )}
     </div>
   );
 };
