@@ -25,11 +25,11 @@ const Form: React.FC = () => {
       <h2>フォーム</h2>
       <div style={{ display:"flex" }}>
         <p style={{ padding:"2rem" }}>チェックボックス：</p>
-        <CheckBoxComponent values={checkboxValues} setValues={setCheckboxValues} />
+        <CheckBoxComponent checkValues={checkboxValues} setCheckValues={setCheckboxValues} />
       </div>
       <div style={{ display: "flex", paddingLeft:"2rem" }}>
         <p style={{ margin: "0.5rem 3rem 0 0" }}>ラジオボタン：</p>
-        <RadioButtonComponent values={radioValue} setValue={setRadioValue} />
+        <RadioButtonComponent radioValue={radioValue} setRadioValue={setRadioValue} />
       </div>
       <div style={{ display: "flex",paddingLeft:"2rem", marginTop: "2rem"}}>
         <p style={{ margin:"0.5rem 3rem 0 0" }}>テキストフィールド：</p>
