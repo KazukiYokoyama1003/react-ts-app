@@ -5,18 +5,18 @@ const options: FieldProps[] = [
 ];
 
 interface TextFieldComponentProps {
-  values: { [key: string]: string };
-  setValue: (values: (prev: { [key: string]: string }) => { [key: string]: string }) => void;
+  textValue: { [key: string]: string };
+  setTextValue: (values: (prev: { [key: string]: string }) => { [key: string]: string }) => void;
 }
 
-const TextFieldComponent = ({ values, setValue }: TextFieldComponentProps) => {
+const TextFieldComponent = ({ textValue, setTextValue }: TextFieldComponentProps) => {
   const handleSetValue = (id: string, value: string) => {
-    setValue((prev) => ({ ...prev, [id]: value }));
+    setTextValue((prev) => ({ ...prev, [id]: value }));
   };
 
   return (
     <div style={{ padding: "20px" }}>
-      <TextField options={options} values={values} setValue={handleSetValue} />
+      <TextField options={options} taxtValues={textValue} setTextValue={handleSetValue} />
     </div>
   );
 };

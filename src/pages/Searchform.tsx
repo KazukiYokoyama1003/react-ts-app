@@ -8,22 +8,13 @@ import ClearButtonComponent from "./search/ClearButtonComponent";
 const Form: React.FC = () => {
   const [checkboxValues, setCheckboxValues] = useState<string[]>([]);
   const [radioValue, setRadioValue] = useState("");
-  const [textValues, setTextValues] = useState<{ [key: string]: string }>({
-    name: "",
-  });
+  const [textValue, setTextValues] = useState("");
   const [isCleared, setIsCleared] = useState(false);
 
   const handleClear = () => {
     setCheckboxValues([]);
     setRadioValue("");
-    setTextValues((prev) =>
-      Object.keys(prev).reduce((acc, key) => {
-        acc[key] = "";
-        return acc;
-      }, {} as { [key: string]: string })
-    );
-    setIsCleared(true);
-
+    setTextValues("");
     setTimeout(() => setIsCleared(false), 2000);
   };
 
@@ -40,7 +31,7 @@ const Form: React.FC = () => {
       </div>
       <div style={{ display: "flex",paddingLeft:"2rem", marginTop: "2rem"}}>
         <p style={{ margin:"0.5rem 3rem 0 0" }}>テキストフィールド：</p>
-        <TextFieldComponent values={textValues} setValue={setTextValues} />
+        <TextFieldComponent textValues={textValue} setTextValue={setTextValues} />
       </div>
       <div style={{ display:"flex", justifyContent:"center", marginTop:"2rem" }}>
         <PostButtonComponent />

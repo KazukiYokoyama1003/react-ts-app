@@ -10,13 +10,13 @@ export interface FieldProps {
 
 interface TextFieldProps {
   options: FieldProps[];
-  values: { [key: string]: string };
-  setValue: (id: string, value: string) => void;
+  taxtValues: { [key: string]: string };
+  setTextValue: (id: string, value: string) => void;
 }
 
-export default function BasicTextFields({ options, values, setValue }: TextFieldProps) {
+export default function BasicTextFields({ options, taxtValues, setTextValue }: TextFieldProps) {
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.id, e.target.value);
+    setTextValue(e.target.id, e.target.value);
   };
 
   return (
@@ -29,7 +29,7 @@ export default function BasicTextFields({ options, values, setValue }: TextField
             color={option.color || 'primary'}
             label={option.label}
             variant={option.variant || 'outlined'}
-            value={values[option.id] || ""}
+            value={taxtValues[option.id] || ""}
             onChange={handleInput}
           />
         </Box>
