@@ -8,14 +8,18 @@ import ClearButtonComponent from "./search/ClearButtonComponent";
 const Form: React.FC = () => {
   const [checkboxValues, setCheckboxValues] = useState<string[]>([]);
   const [radioValue, setRadioValue] = useState("");
-  const [textValue, setTextValues] = useState("");
-  const [isCleared, setIsCleared] = useState(false);
+  const [textValue, setTextValue] = useState("");
+
+  const handleCheckChange = (label: string, checked: boolean) => {
+    setCheckboxValues((prev) =>
+      checked ? [...prev,label] :prev.filter((v) => v !== label)
+    );
+  };
 
   const handleClear = () => {
     setCheckboxValues([]);
     setRadioValue("");
-    setTextValues("");
-    setTimeout(() => setIsCleared(false), 2000);
+    setTextValue("");
   };
 
   return (
@@ -23,7 +27,7 @@ const Form: React.FC = () => {
       <h2>フォーム</h2>
       <div style={{ display:"flex" }}>
         <p style={{ padding:"2rem" }}>チェックボックス：</p>
-        <CheckBoxComponent checkValues={checkboxValues} setCheckValues={setCheckboxValues} />
+        <CheckBoxComponent checkValues={checkboxValues} setCheckValues={setCheckboxValues}  handleCheckChange={handleCheckChange}/>
       </div>
       <div style={{ display: "flex", paddingLeft:"2rem" }}>
         <p style={{ margin: "0.5rem 3rem 0 0" }}>ラジオボタン：</p>
@@ -31,7 +35,7 @@ const Form: React.FC = () => {
       </div>
       <div style={{ display: "flex",paddingLeft:"2rem", marginTop: "2rem"}}>
         <p style={{ margin:"0.5rem 3rem 0 0" }}>テキストフィールド：</p>
-        <TextFieldComponent textValues={textValue} setTextValue={setTextValues} />
+        <TextFieldComponent textValue={textValue} setTextValue={setTextValue} />
       </div>
       <div style={{ display:"flex", justifyContent:"center", marginTop:"2rem" }}>
         <PostButtonComponent />

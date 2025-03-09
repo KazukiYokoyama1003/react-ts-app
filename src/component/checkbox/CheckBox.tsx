@@ -7,6 +7,7 @@ interface CheckBoxProps extends Omit<InputHTMLAttributes<HTMLInputElement>, "onC
   color?: string;
   label: string;
   values: string[];
+  onChange: (label: string, checked: boolean) => void;
   setValues: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
@@ -15,6 +16,7 @@ const CheckBox: FC<CheckBoxProps> = ({
   color = "black",
   label = "",
   values,
+  onChange,
   setValues,
   className,
   ...props
