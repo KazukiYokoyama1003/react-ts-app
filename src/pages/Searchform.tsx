@@ -22,6 +22,9 @@ const Form: React.FC = () => {
     }
   };
   
+  const handleTextChange = (value: string) => {
+    setTextValue(value);
+  };
 
   const handleClear = () => {
     setCheckboxValues([]);
@@ -42,7 +45,7 @@ const Form: React.FC = () => {
       </div>
       <div style={{ display: "flex",paddingLeft:"2rem", marginTop: "2rem"}}>
         <p style={{ margin:"0.5rem 3rem 0 0" }}>テキストフィールド：</p>
-        <TextFieldComponent textValue={textValue} setTextValue={setTextValue} />
+        <TextFieldComponent textValue={textValue} setTextValue={setTextValue} handleTextChange={handleTextChange}/>
       </div>
       <div style={{ display:"flex", justifyContent:"center", marginTop:"2rem" }}>
         <PostButtonComponent />

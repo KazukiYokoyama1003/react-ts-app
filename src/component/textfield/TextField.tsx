@@ -12,11 +12,13 @@ interface TextFieldProps {
   options: FieldProps[];
   textValue: string;
   setTextValue: (value: string) => void;
+  handleTextChange: (value: string) => void;
 }
 
-export default function BasicTextFields({ options, textValue, setTextValue }: TextFieldProps) {
+export default function BasicTextFields({ options, textValue, setTextValue, handleTextChange }: TextFieldProps) {
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTextValue(e.target.value);
+    handleTextChange(e.target.value);
   };
 
   return (
