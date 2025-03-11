@@ -11,6 +11,7 @@ interface RadioButtonProps {
   options: RadioButtonOption[];
   selectedValue: string;
   setSelectedValue: (value: string) => void;
+  onChange: (label: string, checked: boolean) => void;
 }
 
 const RadioButton: FC<RadioButtonProps> = ({ options, selectedValue, setSelectedValue }) => {

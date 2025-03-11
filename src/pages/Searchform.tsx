@@ -16,6 +16,13 @@ const Form: React.FC = () => {
     );
   };
 
+  const handleRadioChange = (label: string, checked: boolean) => {
+    if (checked) {
+      setRadioValue(label);
+    }
+  };
+  
+
   const handleClear = () => {
     setCheckboxValues([]);
     setRadioValue("");
@@ -31,7 +38,7 @@ const Form: React.FC = () => {
       </div>
       <div style={{ display: "flex", paddingLeft:"2rem" }}>
         <p style={{ margin: "0.5rem 3rem 0 0" }}>ラジオボタン：</p>
-        <RadioButtonComponent radioValue={radioValue} setRadioValue={setRadioValue} />
+        <RadioButtonComponent radioValue={radioValue} setRadioValue={setRadioValue} handleRadioChange={handleRadioChange}/>
       </div>
       <div style={{ display: "flex",paddingLeft:"2rem", marginTop: "2rem"}}>
         <p style={{ margin:"0.5rem 3rem 0 0" }}>テキストフィールド：</p>

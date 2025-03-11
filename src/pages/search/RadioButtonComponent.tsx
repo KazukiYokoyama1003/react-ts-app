@@ -3,9 +3,10 @@ import RadioButton from "../../component/radiobutton/RadioButton2";
 interface RadioButtonComponentProps {
   radioValue: string;
   setRadioValue: (value: string) => void;
+  handleRadioChange: (label: string, checked: boolean) => void;
 }
 
-const RadioButtonComponent = ({ radioValue, setRadioValue }: RadioButtonComponentProps) => {
+const RadioButtonComponent: React.FC<RadioButtonComponentProps> = ({ radioValue, setRadioValue, handleRadioChange }) => {
   return (
     <div>
       <RadioButton
@@ -16,6 +17,7 @@ const RadioButtonComponent = ({ radioValue, setRadioValue }: RadioButtonComponen
         ]}
         selectedValue={radioValue}
         setSelectedValue={setRadioValue}
+        onChange={handleRadioChange}
       />
     </div>
   );
