@@ -28,6 +28,7 @@ const CheckBox: FC<CheckBoxProps> = ({
     } else {
       setValues((prev) => prev.filter((v) => v !== value));
     }
+    onChange(label, event.target.checked);
   };
 
   return (
