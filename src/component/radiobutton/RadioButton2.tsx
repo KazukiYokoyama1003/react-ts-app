@@ -10,13 +10,12 @@ interface RadioButtonOption {
 interface RadioButtonProps {
   options: RadioButtonOption[];
   selectedValue: string;
-  setSelectedValue: (value: string) => void;
-  onChange: (label: string, checked: boolean) => void;
+  onChange: (label: string) => void;
 }
 
-const RadioButton: FC<RadioButtonProps> = ({ options, selectedValue, setSelectedValue }) => {
+const RadioButton: FC<RadioButtonProps> = ({ options, selectedValue, onChange }) => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedValue(event.target.value);
+    onChange(event.target.value);
   };
 
   return (

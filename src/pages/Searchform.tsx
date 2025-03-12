@@ -16,10 +16,8 @@ const Form: React.FC = () => {
     );
   };
 
-  const handleRadioChange = (label: string, checked: boolean) => {
-    if (checked) {
-      setRadioValue(label);
-    }
+  const handleRadioChange = (value: string) =>{
+    setRadioValue(value);
   };
   
   const handleTextChange = (value: string) => {
@@ -37,15 +35,15 @@ const Form: React.FC = () => {
       <h2>フォーム</h2>
       <div style={{ display:"flex" }}>
         <p style={{ padding:"2rem" }}>チェックボックス：</p>
-        <CheckBoxComponent checkValues={checkboxValues} setCheckValues={setCheckboxValues}  handleCheckChange={handleCheckChange}/>
+        <CheckBoxComponent checkValues={checkboxValues} handleCheckChange={handleCheckChange}/>
       </div>
       <div style={{ display: "flex", paddingLeft:"2rem" }}>
         <p style={{ margin: "0.5rem 3rem 0 0" }}>ラジオボタン：</p>
-        <RadioButtonComponent radioValue={radioValue} setRadioValue={setRadioValue} handleRadioChange={handleRadioChange}/>
+        <RadioButtonComponent radioValue={radioValue} handleRadioChange={handleRadioChange}/>
       </div>
       <div style={{ display: "flex",paddingLeft:"2rem", marginTop: "2rem"}}>
         <p style={{ margin:"0.5rem 3rem 0 0" }}>テキストフィールド：</p>
-        <TextFieldComponent textValue={textValue} setTextValue={setTextValue} handleTextChange={handleTextChange}/>
+        <TextFieldComponent textValue={textValue} handleTextChange={handleTextChange}/>
       </div>
       <div style={{ display:"flex", justifyContent:"center", marginTop:"2rem" }}>
         <PostButtonComponent />

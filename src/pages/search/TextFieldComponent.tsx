@@ -6,14 +6,13 @@ const options: FieldProps[] = [
 
 interface TextFieldComponentProps {
   textValue: string;
-  setTextValue: (value: string) => void;
   handleTextChange: (value: string) => void;
 }
 
-const TextFieldComponent = ({ textValue, setTextValue, handleTextChange }: TextFieldComponentProps) => {
+const TextFieldComponent = ({ textValue, handleTextChange }: TextFieldComponentProps) => {
   return (
     <div style={{ padding: "20px" }}>
-      <TextField options={options} textValue={textValue} setTextValue={setTextValue} handleTextChange={handleTextChange}/>
+      <TextField options={options} textValue={textValue} handleTextChange={handleTextChange}/>
     </div>
   );
 };

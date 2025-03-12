@@ -8,7 +8,6 @@ interface CheckBoxProps extends Omit<InputHTMLAttributes<HTMLInputElement>, "onC
   label: string;
   values: string[];
   onChange: (label: string, checked: boolean) => void;
-  setValues: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
 const CheckBox: FC<CheckBoxProps> = ({
@@ -17,17 +16,10 @@ const CheckBox: FC<CheckBoxProps> = ({
   label = "",
   values,
   onChange,
-  setValues,
   className,
   ...props
 }) => {
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const value = label;
-    if (event.target.checked) {
-      setValues((prev) => [...prev, value]);
-    } else {
-      setValues((prev) => prev.filter((v) => v !== value));
-    }
     onChange(label, event.target.checked);
   };
 
